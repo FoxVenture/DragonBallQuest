@@ -12,11 +12,11 @@ TagManager:
   - Water
   - UI
   - 
-  - Grab
+  - Grabbable
   - Ground
   - Body
   - Grab Ignore
-  - 
+  - Lock&Key
   - 
   - 
   - 
