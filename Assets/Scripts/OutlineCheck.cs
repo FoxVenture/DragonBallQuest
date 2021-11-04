@@ -31,4 +31,9 @@ public class OutlineCheck : MonoBehaviour
     {
         unlocked = true;
     }
+
+    public void grabIgnore()
+    {
+        box.layer = LayerMask.NameToLayer("Grab Ignore");
+    }
 }
