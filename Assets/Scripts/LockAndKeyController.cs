@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LockAndKeyController : MonoBehaviour
 {
-    [SerializeField]
+   /* [SerializeField]
     GameObject key, cube;
 
     bool locked { get; set; }
@@ -51,5 +51,5 @@ public class LockAndKeyController : MonoBehaviour
     {
         locked = true;
         gameObject.GetComponent<Renderer>().material.color = Color.red;
-    }
+    } */
 }

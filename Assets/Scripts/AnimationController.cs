@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackPodController : MonoBehaviour
+public class AnimationController : MonoBehaviour
 {
     Animator anim;
 
@@ -10,7 +10,7 @@ public class AttackPodController : MonoBehaviour
     {
         anim = gameObject.GetComponent<Animator>();
     }
-    public void OpenDoor()
+    public void PlayAnimation()
     { 
         anim.SetTrigger("Active");
     }

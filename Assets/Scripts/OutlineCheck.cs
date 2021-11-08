@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OutlineCheck : MonoBehaviour
 {
+    [SerializeField] LockKey locks;
+    // remove this?
     bool unlocked = false;
     [SerializeField] GameObject box;
 
@@ -20,7 +22,7 @@ public class OutlineCheck : MonoBehaviour
 
     public void enableOutline()
     {
-        if(unlocked)
+        if(!locks.CheckIsLockedBoth())
         {
             gameObject.GetComponent<Outline>().enabled = true;
             box.layer = LayerMask.NameToLayer("Grabbable");
@@ -29,7 +31,7 @@ public class OutlineCheck : MonoBehaviour
 
     public void unlockOutline()
     {
-        unlocked = true;
+        locks.UnlockLockOne();
     }
 
     public void grabIgnore()
