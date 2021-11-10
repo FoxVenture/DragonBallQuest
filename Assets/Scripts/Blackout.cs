@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Blackout : MonoBehaviour
 {
-    [SerializeField] Camera mainCamera;
-    [SerializeField] Camera blackOutCamera;
+    [SerializeField] GameObject mainCamera;
+    [SerializeField] GameObject blackOutCamera;
 
     bool mainCameraActive = true;
 
@@ -21,21 +21,22 @@ public class Blackout : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "MainCamera" && mainCameraActive)
+        if(collision.gameObject.tag == "Blackout")
         {
-            mainCamera.enabled = false;
+            Debug.Log("COLLIDE MET DESK");
+            mainCamera.SetActive(false);
             mainCameraActive = false;
-            blackOutCamera.enabled = true;
+            blackOutCamera.SetActive(true);
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        if(collision.gameObject.tag == "MainCamera" && !mainCameraActive)
+        if(collision.gameObject.tag == "Blackout" && !mainCameraActive)
         {
-            mainCamera.enabled = true;
+           // mainCamera.enabled = true;
             mainCameraActive = true;
-            blackOutCamera.enabled = false;
+           // blackOutCamera.enabled = false;
         }
     }
 }
