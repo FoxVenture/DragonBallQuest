@@ -6,7 +6,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class OutlineCheck : MonoBehaviour
 {
     [SerializeField] LockKey locks;
-    // remove this?
     bool unlocked = false;
     [SerializeField] GameObject box;
     XRGrabInteractable grabScript;
@@ -14,12 +13,6 @@ public class OutlineCheck : MonoBehaviour
     void Start()
     {
         grabScript = box.GetComponent<XRGrabInteractable>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void enableOutline()

@@ -22,5 +22,3 @@ public class SocketWithTagCheck : XRSocketInteractor
         return interactable.CompareTag(targetTag);
     }
 }
-
-//https://www.youtube.com/watch?v=Q7TGTAgmHQ0&t=385s
